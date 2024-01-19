@@ -35,7 +35,7 @@ function Generator() {
                 setLoading(false);
                 setTimeout(() => {
                     setImageURL('/');
-                }, 3000);
+                }, 4000);
             }
             else {
                 setImageURL("https://media0.giphy.com/media/RWUqVYucDBD4A/giphy.webp?cid=ecf05e47shpq3d68hfx1xmxxhrtkwjkvhvo3fz0rvgw021xq&ep=v1_gifs_search&rid=giphy.webp&ct=g");
@@ -43,7 +43,7 @@ function Generator() {
                 setLoading(false);
                 setTimeout(() => {
                     setImageURL('/');
-                }, 3000);
+                }, 4000);
 
             }
         }
