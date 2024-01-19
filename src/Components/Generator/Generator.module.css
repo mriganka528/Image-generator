@@ -1,0 +1,324 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+.heading h1 {
+  background: -webkit-linear-gradient(94deg, #ffffff 0%, #000000 100%);
+  font-size: 3rem;
+  text-align: center;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: .44rem;
+  margin-bottom: 3rem;
+
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.inputGroup input {
+  background-color: #2E2E2E;
+  border-radius: 10px;
+  border: none;
+  width: 40rem;
+  padding-block: 1.3rem;
+  padding-left: 1rem;
+  color: white;
+  font-size: 14px;
+  font-family: 'Cinzel', serif;
+}
+
+::placeholder {
+  color: rgb(184, 184, 184);
+  font-family: 'Cinzel', serif;
+}
+
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 1em 2em;
+  font-size: 15px;
+  margin-left: 2rem;
+  font-weight: bold;
+  border-width: 0;
+  border-radius: 1.5em;
+  transition: .5s ease;
+}
+
+.text {
+  font-size: 1.2em;
+  color: white;
+  z-index: 1;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.btn::before {
+  position: absolute;
+  content: '';
+  width: 120%;
+  height: 260%;
+  background-image: linear-gradient(135deg, rgba(0, 5, 255, 1) 0%, rgba(255, 0, 159, 1) 100%);
+}
+
+.btn::after {
+  position: absolute;
+  content: '';
+  width: 88%;
+  height: 80%;
+  border-width: 0;
+  border-radius: 1.2em;
+  background-color: black;
+  opacity: .7;
+  transition: .5ms ease;
+}
+
+.btn:hover.btn {
+  transform: scale(1.1);
+}
+
+.btn:hover.btn::after {
+  opacity: .5;
+}
+
+.btn:hover.btn::before {
+  animation: turn_4810 .8s infinite linear;
+}
+
+.btn:active.btn {
+  transform: scale(1.05);
+}
+
+.btn:active.btn::before {
+  transform: scale(1.05);
+  animation: turn_4810 .2s infinite linear;
+}
+
+@keyframes turn_4810 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.generated {
+  background-color: rgb(29, 29, 29);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 38rem;
+  border-radius: 15px;
+  margin-top: 3rem;
+  padding-bottom: 1.5rem;
+
+}
+
+.generated h1 {
+  background: -webkit-linear-gradient(94deg, #ffffff 0%, #000000 100%);
+  font-size: 2rem;
+  text-align: center;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: .44rem;
+  margin-bottom: 2rem;
+}
+
+.generated img {
+  border-radius: 10px;
+  height: 512px;
+  width: 512px;
+}
+
+.loader {
+  width: 0%;
+  height: 3.5px;
+  background-color: red;
+}
+
+.loader_full {
+  width: 100%;
+  height: 3.5px;
+  background-color: red;
+  transition: 15s ease-out;
+}
+
+.downDiv {
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+}
+
+.downDiv button {
+  color: rgba(255, 255, 255, 0.692);
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.397);
+  background: rgba(255, 255, 255, 0.068);
+  overflow: hidden;
+  font-size: 0.9rem;
+  font-weight: 600;
+  gap: 8px;
+  border-radius: 5px;
+  margin: 0 5px;
+  transition: 0.2s;
+  border: 1px solid transparent;
+}
+
+.downDiv button:hover {
+  border-color: rgba(209, 202, 202, 0.623);
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.144),
+      rgba(255, 255, 255, 0.247),
+      rgba(255, 255, 255, 0.39));
+  box-shadow: 0 6px rgba(255, 255, 255, 0.623);
+  transform: translateY(-6px);
+}
+
+.downDiv button:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+@media (max-width:900px) {
+  .heading h1 {
+    font-size: 2rem;
+  }
+
+  .inputGroup input {
+    width: 25rem;
+  }
+
+  .btn {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width:675px) {
+  .heading h1 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    padding-inline: 1rem;
+  }
+
+  .generated {
+    width: 25.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .generated h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .generated img {
+    height: 350px;
+    width: 350px;
+  }
+
+  .inputGroup input {
+    width: 18rem;
+    font-size: .65rem;
+    padding-block: 1rem;
+    padding-left: .5rem;
+  }
+
+  .btn {
+    width: 6.5rem;
+    font-size: 12.5px;
+  }
+
+  .downDiv {
+    margin-top: .6rem;
+    margin-bottom: 0rem;
+  }
+
+  .downDiv button {
+    height: 3rem;
+    width: 4rem;
+  }
+}
+
+@media (max-width:460px) {
+  .heading h1 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    text-wrap: wrap;
+  }
+
+  .inputGroup input {
+    width: 11rem;
+    font-size: .65rem;
+    padding-block: .8rem;
+    padding-left: .5rem;
+  }
+
+  ::placeholder {
+    font-size: .58rem;
+  }
+
+  .btn {
+    width: 5rem;
+    margin-left: .5rem;
+    font-size: 10px;
+  }
+
+  .generated {
+    width: 20.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .generated h1 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .generated img {
+    height: 270px;
+    width: 270px;
+  }
+
+  .downDiv {
+    margin-top: .6rem;
+    margin-bottom: 0rem;
+  }
+
+  .downDiv button {
+    height: 2rem;
+    width: 3.5rem;
+    gap: 0px;
+  }
+}
+
+@media (max-width:370px) {
+  .generated {
+    width: 16.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .generated img {
+    height: 215px;
+    width: 215px;
+  }
+}

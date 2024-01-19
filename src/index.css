@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cinzel', serif;
+  background-color: rgb(19, 19, 19);
+  background-position:left;
+  background-size:cover;
+  scroll-behavior: smooth;
+ overflow-x: hidden;
+}
+html
+{
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
