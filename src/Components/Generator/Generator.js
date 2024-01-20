@@ -23,7 +23,7 @@ function Generator() {
                 model: "dall-e-3",
                 prompt: "a white siamese cat",
                 n: 1,
-                size: "1024x1024",
+                size: "512x512",
             });
             setImageURL(response.data.data[0].url);
             setLoading(false)
@@ -62,9 +62,7 @@ function Generator() {
                 <div className={Styles.inputGroup}>
                     <input placeholder="Give a description of the image " ref={inpRef} type="text" id="input-field" />
                     <div className={Styles.buttonDiv}>
-                        <button className={Styles.btn} onClick={() => { generate() }}>
-                            <span className={Styles.text}>Generate</span>
-                        </button>
+                        <button className={Styles.btn} onClick={() => { generate() }}><span>Generate</span></button>
                     </div>
                 </div>
                 <div className={Styles.generated}>
