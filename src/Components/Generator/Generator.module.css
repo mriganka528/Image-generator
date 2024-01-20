@@ -62,7 +62,7 @@
 .btn span {
   background: #1e293b;
   border-radius: 999px;
-  color: #fff;
+  color: #e4e4e4;
   display: grid;
   inset: 5px;
   place-items: center;
@@ -251,7 +251,9 @@
     padding: 1.25rem 2.7rem;
     margin-left: .6rem;
   }
-
+  .btn span {
+    inset: 4px;
+  }
   .downDiv {
     margin-top: .6rem;
     margin-bottom: 0rem;
