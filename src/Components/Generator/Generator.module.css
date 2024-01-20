@@ -46,77 +46,32 @@
 }
 
 .btn {
+  border: 0 solid;
+  cursor: pointer;
+  font-family: 'Cinzel', serif;
+  font-size: 108%;
+  background: linear-gradient(90deg, blue, red);
+  border-radius: 999px;
+  font-weight: 800;
+  padding: 1.8rem 5rem;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  padding: 1em 2em;
-  font-size: 15px;
-  margin-left: 2rem;
-  font-weight: bold;
-  border-width: 0;
-  border-radius: 1.5em;
-  transition: .5s ease;
+  text-transform: uppercase;
+  margin-left: 1rem;
 }
 
-.text {
-  font-size: 1.2em;
-  color: white;
-  z-index: 1;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-}
-
-.btn::before {
+.btn span {
+  background: #1e293b;
+  border-radius: 999px;
+  color: #fff;
+  display: grid;
+  inset: 5px;
+  place-items: center;
   position: absolute;
-  content: '';
-  width: 120%;
-  height: 260%;
-  background-image: linear-gradient(135deg, rgba(0, 5, 255, 1) 0%, rgba(255, 0, 159, 1) 100%);
+  transition: background 0.3s;
 }
 
-.btn::after {
-  position: absolute;
-  content: '';
-  width: 88%;
-  height: 80%;
-  border-width: 0;
-  border-radius: 1.2em;
-  background-color: black;
-  opacity: .7;
-  transition: .5ms ease;
-}
-
-.btn:hover.btn {
-  transform: scale(1.1);
-}
-
-.btn:hover.btn::after {
-  opacity: .5;
-}
-
-.btn:hover.btn::before {
-  animation: turn_4810 .8s infinite linear;
-}
-
-.btn:active.btn {
-  transform: scale(1.05);
-}
-
-.btn:active.btn::before {
-  transform: scale(1.05);
-  animation: turn_4810 .2s infinite linear;
-}
-
-@keyframes turn_4810 {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+.btn:hover span {
+  background: none;
 }
 
 .generated {
@@ -210,9 +165,6 @@
     width: 25rem;
   }
 
-  .btn {
-    margin-left: 1rem;
-  }
 }
 
 @media (max-width:675px) {
@@ -245,8 +197,9 @@
   }
 
   .btn {
-    width: 6.5rem;
-    font-size: 12.5px;
+    font-size: 89%;
+    padding: 1.5rem 3.5rem;
+    margin-left: .8rem;
   }
 
   .downDiv {
@@ -278,12 +231,6 @@
     font-size: .58rem;
   }
 
-  .btn {
-    width: 5rem;
-    margin-left: .5rem;
-    font-size: 10px;
-  }
-
   .generated {
     width: 20.5rem;
     padding-bottom: 1.5rem;
@@ -297,6 +244,12 @@
   .generated img {
     height: 270px;
     width: 270px;
+  }
+
+  .btn {
+    font-size: 66%;
+    padding: 1.25rem 2.7rem;
+    margin-left: .6rem;
   }
 
   .downDiv {
