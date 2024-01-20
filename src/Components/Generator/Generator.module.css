@@ -67,7 +67,7 @@
   inset: 5px;
   place-items: center;
   position: absolute;
-  transition: background 0.3s;
+  transition: background 0.55s;
 }
 
 .btn:hover span {
